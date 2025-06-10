@@ -28,14 +28,14 @@ DIRECTORYREPORT="/usr/local/www/speedtest"
 #
 # Caso queira criar o monitoramento do SpeedTest para outras Interfaces WAN, recomendo copiar
 # o bloco de variáveis abaixo e alterar o valor da Interface e o Número de referência.
-INTERFACE01="igc2"
+INTERFACE01="re0"
 SOURCE01=$(/sbin/ifconfig $INTERFACE01 | /usr/bin/grep -w inet | /usr/bin/sed -e 's/^[[:space:]]*//' | /usr/bin/cut -d ' ' -f2)
 DESCRIPTION01=$(/sbin/ifconfig $INTERFACE01 | /usr/bin/grep -w description | /usr/bin/sed -e 's/^[[:space:]]*//' | /usr/bin/cut -d ' ' -f2)
 PAGEREPORT01=$INTERFACE01.html
 #
 # Exemplo da Segunda Interface WAN de Monitoramento do SpeedTest, só descomentar e alterar o
 # valor da variável Interface com o nome correto que o pfSense atribuiu a Interface
-INTERFACE02="igc3"
+INTERFACE02="re1"
 SOURCE02=$(/sbin/ifconfig $INTERFACE02 | /usr/bin/grep -w inet | /usr/bin/sed -e 's/^[[:space:]]*//' | /usr/bin/cut -d ' ' -f2)
 DESCRIPTION02=$(/sbin/ifconfig $INTERFACE02 | /usr/bin/grep -w description | /usr/bin/sed -e 's/^[[:space:]]*//' | /usr/bin/cut -d ' ' -f2)
 PAGEREPORT02="$INTERFACE02.html"
