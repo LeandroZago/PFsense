@@ -32,7 +32,6 @@ INTERFACE01="igc2"
 SOURCE01=$(/sbin/ifconfig $INTERFACE01 | /usr/bin/grep -w inet | /usr/bin/sed -e 's/^[[:space:]]*//' | /usr/bin/cut -d ' ' -f2)
 DESCRIPTION01=$(/sbin/ifconfig $INTERFACE01 | /usr/bin/grep -w description | /usr/bin/sed -e 's/^[[:space:]]*//' | /usr/bin/cut -d ' ' -f2)
 PAGEREPORT01=$INTERFACE01.html
-
 #
 # Exemplo da Segunda Interface WAN de Monitoramento do SpeedTest, só descomentar e alterar o
 # valor da variável Interface com o nome correto que o pfSense atribuiu a Interface
