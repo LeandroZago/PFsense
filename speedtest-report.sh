@@ -64,13 +64,13 @@ if [ -f "$DIRECTORYREPORT/$PAGEREPORT01" ]
 fi
 #
 # Exemplo do Bloco de If do arquivo de Relatório da Segunda Interface WAN.
-#if [ -f "$DIRECTORYREPORT/$PAGEREPORT02" ]
-#	then
-#		echo -e "Arquivo $DIRECTORYREPORT/$PAGEREPORT02 - OK"
-#	else
-#		/usr/local/bin/speedtest-cli --csv-header > $DIRECTORYREPORT/$PAGEREPORT02
-#		echo -e "Arquivo $DIRECTORYREPORT/$PAGEREPORT02 criado com sucesso!!!"
-#fi
+if [ -f "$DIRECTORYREPORT/$PAGEREPORT02" ]
+	then
+		echo -e "Arquivo $DIRECTORYREPORT/$PAGEREPORT02 - OK"
+	else
+		/usr/local/bin/speedtest-cli --csv-header > $DIRECTORYREPORT/$PAGEREPORT02
+		echo -e "Arquivo $DIRECTORYREPORT/$PAGEREPORT02 criado com sucesso!!!"
+fi
 #
 # Gerando o Relatório do SpeedTest da Interface WAN
 # opção do comando: echo: -e (interpretador de escapes de barra invertida)
@@ -84,5 +84,5 @@ fi
 echo -e "Relatório do SpeedTest gerado com sucesso em: $DIRECTORYREPORT/$PAGEREPORT01"
 #
 # Exemplo do relatório da segunda Interface WAN do SpeedTest
-#/usr/local/bin/speedtest-cli --secure --source=$SOURCE02 --csv >> $DIRECTORYREPORT/$PAGEREPORT02
-#echo -e "Relatório do SpeedTest gerado com sucesso em: $DIRECTORYREPORT/$PAGEREPORT02"
+/usr/local/bin/speedtest-cli --secure --source=$SOURCE02 --csv >> $DIRECTORYREPORT/$PAGEREPORT02
+echo -e "Relatório do SpeedTest gerado com sucesso em: $DIRECTORYREPORT/$PAGEREPORT02"
